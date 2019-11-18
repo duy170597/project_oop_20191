@@ -4,7 +4,7 @@ import database.IStorage;
 import entity.Entity;
 import ralationship.Relationship;
 
-public class IStorageImpl implements IStorage {
+public class OrientDBStorage implements IStorage {
     public void insertEntity(Entity[] entity) {
 
     }

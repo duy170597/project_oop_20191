@@ -8,5 +8,12 @@
     <artifactId>project_oop_20191</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.orientechnologies</groupId>
+            <artifactId>orientdb-client</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+    </dependencies>
 
 </project>
