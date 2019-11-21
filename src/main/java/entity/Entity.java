@@ -5,6 +5,15 @@ public class Entity {
     private String label;	// nhãn hiển thị
     private String description;	// mô tả
 
+    public Entity() {
+    }
+
+    public Entity(String id, String label, String description) {
+        this.id = id;
+        this.label = label;
+        this.description = description;
+    }
+
     public String getId() {
     	return id;
     }
@@ -27,6 +36,10 @@ public class Entity {
 
     public void setDescription(String description) {
     	this.description = description;
+    }
+
+    public String toString() {
+        return "\nid: " + id + "\nlabel: " + label + "\ndescription: " + description;
     }
 }
 
