@@ -24,15 +24,15 @@ public class CountryGenaration extends EntityGenaration {
     }
 
     public Country[] genarate(int amount) {
-        Country[] aggrements = new Country[amount];
+        Country[] countries = new Country[amount];
         Random rd = new Random();
         for (int i = 0; i < amount; i++) {
-            aggrements[i] = new Country(
+            countries[i] = new Country(
                     "country"+i,
                     getLabel()[rd.nextInt(getLabel().length)],
                     getDescription()[rd.nextInt(getDescription().length)]);
         }
-        return aggrements;
+        return countries;
     }
 
     public static void main(String[] args) {

@@ -16,6 +16,30 @@ public class Relationship {
         this.extractedDate = extractedDate;
     }
 
+    public String getRelationshipName() {
+        return relationshipName;
+    }
+
+    public void setRelationshipName(String relationshipName) {
+        this.relationshipName = relationshipName;
+    }
+
+    public String getExtractedLink() {
+        return extractedLink;
+    }
+
+    public void setExtractedLink(String extractedLink) {
+        this.extractedLink = extractedLink;
+    }
+
+    public Date getExtractedDate() {
+        return extractedDate;
+    }
+
+    public void setExtractedDate(Date extractedDate) {
+        this.extractedDate = extractedDate;
+    }
+
     public String toString() {
         return "\nrelationshipName: " + relationshipName + "\nextractedLink: " + extractedLink + "\nextractedDate: " + extractedDate;
     }

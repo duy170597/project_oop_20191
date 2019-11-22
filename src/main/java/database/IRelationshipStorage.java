@@ -1,27 +1,8 @@
 package database;
 
-
-import entity.*;
 import ralationship.Relationship;
 
-public interface IStorage {
-
-    public void insertEntity(Entity[] entity);
-
-    public void insertAggrements(Aggrement[] aggrements);
-
-    public void insertCountries(Country[] countries);
-
-    public void insertEvents(Event[] events);
-
-    public void insertLocations(Location[] locations);
-
-    public void insertOrganizations(Organization[] organizations);
-
-    public void insertPeople(Person[] people);
-
-    public void insertTimes(Time[] times);
-
+public interface IRelationshipStorage {
     public void insertAgreementRelationships(Relationship[] agreementRelationships);
 
     public void insertCancelRelationships(Relationship[] cancelRelationships);

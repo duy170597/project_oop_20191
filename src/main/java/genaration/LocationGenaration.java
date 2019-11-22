@@ -1,8 +1,6 @@
 package genaration;
 
 import com.google.gson.Gson;
-import entity.Aggrement;
-import entity.Entity;
 import entity.Location;
 
 import java.io.FileReader;

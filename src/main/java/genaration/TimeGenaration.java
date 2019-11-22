@@ -37,11 +37,11 @@ public class TimeGenaration extends EntityGenaration {
     }
 
     public Time[] genarate(int amount) {
-        Time[] aggrements = new Time[amount];
+        Time[] times = new Time[amount];
         Random rd = new Random();
         for (int i = 0; i < amount; i++) {
             try {
-                aggrements[i] = new Time(
+                times[i] = new Time(
                         "time"+i,
                         getLabel()[rd.nextInt(getLabel().length)],
                         getDescription()[rd.nextInt(getDescription().length)],
@@ -50,7 +50,7 @@ public class TimeGenaration extends EntityGenaration {
                 e.printStackTrace();
             }
         }
-        return aggrements;
+        return times;
     }
 
     public static void main(String[] args) {

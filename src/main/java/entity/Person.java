@@ -54,4 +54,9 @@ public class Person extends Entity {
     public int getAge() {
         return new Date().getYear() - birthdate.getYear();
     }
+
+    public String toString() {
+        return super.toString() + "\ngender: " + getGender() + "\nbirthdate: "
+                + getBirthdate() + "\nemail: " + getEmail() + "\nposition: " + getPosition();
+    }
 }

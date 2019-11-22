@@ -2,15 +2,14 @@ package orientdb;
 
 import com.orientechnologies.orient.core.db.ODatabaseSession;
 import com.orientechnologies.orient.core.db.OrientDB;
-import com.orientechnologies.orient.core.db.OrientDBConfig;
 import com.orientechnologies.orient.core.sql.executor.OResult;
 import com.orientechnologies.orient.core.sql.executor.OResultSet;
 import database.IQuery;
 
 public class OrientDBQuery extends DBConnenction implements IQuery {
     public void executeAQuery1() {
-        OrientDB orient = getDBConnection();
-        ODatabaseSession db = getDBSession();
+        OrientDB orient = createDBConnection();
+        ODatabaseSession db = createDBSession();
 
         String query = "SELECT expand(out('RelationShip')) from Entity where name = ?";
         OResultSet rs = db.query(query, "Italy");
