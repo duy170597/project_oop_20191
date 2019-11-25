@@ -1,6 +1,8 @@
 package entity;
 
 public class Entity {
+    public static int count = 7;    // số loại thực thể
+
     private String id;		// định danh
     private String label;	// nhãn hiển thị
     private String description;	// mô tả
