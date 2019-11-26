@@ -2,8 +2,8 @@ package application;
 
 import database.IAdvanceQuery;
 import database.IBasicQuery;
-import orientdb.OrientDBAdvanceQuery;
-import orientdb.OrientDBBasicQuery;
+import database.OrientDBAdvanceQuery;
+import database.OrientDBBasicQuery;
 
 import java.util.Scanner;
 
@@ -37,8 +37,8 @@ public class Menu {
         System.out.print("\tNhập số quan hệ: ");
         M = scanner.nextInt();
 
-        Function.entityGenaration(N);
-        Function.relationshipGenaration(M);
+        Utility.createEntities(N);
+        Utility.createRelationships(M);
     }
 
     public static void basicQueryMenu(Scanner scanner) {
