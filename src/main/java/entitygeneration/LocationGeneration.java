@@ -1,4 +1,4 @@
-package entitygenaration;
+package entitygeneration;
 
 import com.google.gson.Gson;
 import entity.Location;
@@ -8,13 +8,13 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.Random;
 
-public class LocationGenaration extends EntityGenaration {
-    public LocationGenaration loadFromFile(String fileName) {
+public class LocationGeneration extends EntityGeneration {
+    public LocationGeneration loadFromFile(String fileName) {
         try {
             Gson gson = new Gson();
             Reader reader = new FileReader(fileName);
             // Convert JSON File to Java Object
-            LocationGenaration locationGenaration = gson.fromJson(reader, LocationGenaration.class);
+            LocationGeneration locationGenaration = gson.fromJson(reader, LocationGeneration.class);
             return locationGenaration;
         } catch (IOException e) {
             e.printStackTrace();
@@ -22,7 +22,7 @@ public class LocationGenaration extends EntityGenaration {
         return null;
     }
 
-    public Location[] genarate(int amount) {
+    public Location[] generate(int amount) {
         Location[] locations = new Location[amount];
         Random rd = new Random();
         for (int i = 0; i < amount; i++) {
@@ -32,13 +32,5 @@ public class LocationGenaration extends EntityGenaration {
                     getDescription()[rd.nextInt(getDescription().length)]);
         }
         return locations;
-    }
-
-    public static void main(String[] args) {
-        LocationGenaration locationGenaration = new LocationGenaration().loadFromFile(".\\src\\main\\resources\\location_genaration.json");
-        Location[] locations = locationGenaration.genarate(4);
-        for (Location location: locations) {
-            System.out.println(location.toString());
-        }
     }
 }

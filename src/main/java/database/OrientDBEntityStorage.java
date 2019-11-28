@@ -5,16 +5,68 @@ import com.orientechnologies.orient.core.record.OVertex;
 import entity.*;
 
 public class OrientDBEntityStorage extends DBConnenction implements IEntityStorage {
-    public static OVertex[] agreementVertices;
-    public static OVertex[] countryVertices;
-    public static OVertex[] eventVertices;
-    public static OVertex[] locationVertices;
-    public static OVertex[] organizationVertices;
-    public static OVertex[] personVertices;
-    public static OVertex[] timeVertices;
+    private OVertex[] agreementVertices;
+    private OVertex[] countryVertices;
+    private OVertex[] eventVertices;
+    private OVertex[] locationVertices;
+    private OVertex[] organizationVertices;
+    private OVertex[] personVertices;
+    private OVertex[] timeVertices;
 
-    public void insertEntity(Entity[] entity) {
+    public OVertex[] getAgreementVertices() {
+        return agreementVertices;
+    }
 
+    public void setAgreementVertices(OVertex[] agreementVertices) {
+        this.agreementVertices = agreementVertices;
+    }
+
+    public OVertex[] getCountryVertices() {
+        return countryVertices;
+    }
+
+    public void setCountryVertices(OVertex[] countryVertices) {
+        this.countryVertices = countryVertices;
+    }
+
+    public OVertex[] getEventVertices() {
+        return eventVertices;
+    }
+
+    public void setEventVertices(OVertex[] eventVertices) {
+        this.eventVertices = eventVertices;
+    }
+
+    public OVertex[] getLocationVertices() {
+        return locationVertices;
+    }
+
+    public void setLocationVertices(OVertex[] locationVertices) {
+        this.locationVertices = locationVertices;
+    }
+
+    public OVertex[] getOrganizationVertices() {
+        return organizationVertices;
+    }
+
+    public void setOrganizationVertices(OVertex[] organizationVertices) {
+        this.organizationVertices = organizationVertices;
+    }
+
+    public OVertex[] getPersonVertices() {
+        return personVertices;
+    }
+
+    public void setPersonVertices(OVertex[] personVertices) {
+        this.personVertices = personVertices;
+    }
+
+    public OVertex[] getTimeVertices() {
+        return timeVertices;
+    }
+
+    public void setTimeVertices(OVertex[] timeVertices) {
+        this.timeVertices = timeVertices;
     }
 
     private OVertex insertAgreement(ODatabaseSession db, Agreement agreement) {

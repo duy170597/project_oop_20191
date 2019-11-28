@@ -1,4 +1,4 @@
-package entitygenaration;
+package entitygeneration;
 
 import com.google.gson.Gson;
 import entity.Agreement;
@@ -8,21 +8,21 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.Random;
 
-public class AgreementGenaration extends EntityGenaration {
-    public AgreementGenaration loadFromFile(String fileName) {
+public class AgreementGeneration extends EntityGeneration {
+    public AgreementGeneration loadFromFile(String fileName) {
         try {
             Gson gson = new Gson();
             Reader reader = new FileReader(fileName);
             // Convert JSON File to Java Object
-            AgreementGenaration agreementGenaration = gson.fromJson(reader, AgreementGenaration.class);
-            return agreementGenaration;
+            AgreementGeneration agreementGeneration = gson.fromJson(reader, AgreementGeneration.class);
+            return agreementGeneration;
         } catch (IOException e) {
             e.printStackTrace();
         }
         return null;
     }
 
-    public Agreement[] genarate(int amount) {
+    public Agreement[] generate(int amount) {
         Agreement[] agreements = new Agreement[amount];
         Random rd = new Random();
         for (int i = 0; i < amount; i++) {
@@ -32,13 +32,5 @@ public class AgreementGenaration extends EntityGenaration {
                     getDescription()[rd.nextInt(getDescription().length)]);
         }
         return agreements;
-    }
-
-    public static void main(String[] args) {
-        AgreementGenaration agreementGenaration = new AgreementGenaration().loadFromFile(".\\src\\main\\resources\\agreement_genaration.json");
-        Agreement[] agreements = agreementGenaration.genarate(4);
-        for (Agreement agreement : agreements) {
-            System.out.println(agreement.toString());
-        }
     }
 }

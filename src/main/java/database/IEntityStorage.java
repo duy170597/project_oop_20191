@@ -6,8 +6,6 @@ import ralationship.Relationship;
 
 public interface IEntityStorage {
 
-    public void insertEntity(Entity[] entity);
-
     public void insertAgreements(Agreement[] agreements);
 
     public void insertCountries(Country[] countries);

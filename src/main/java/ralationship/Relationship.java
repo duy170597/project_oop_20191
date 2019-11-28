@@ -3,7 +3,7 @@ package ralationship;
 import java.util.Date;
 
 public class Relationship {
-    public static int count = 11;   // số loại quan hệ
+    public static int numberTypeRelationship = 11;   // số loại quan hệ
 
     private String relationshipName;    // tên quan hệ
     private String extractedLink;   // link trích rút

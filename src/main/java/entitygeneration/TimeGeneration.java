@@ -1,4 +1,4 @@
-package entitygenaration;
+package entitygeneration;
 
 import com.google.gson.Gson;
 import entity.Time;
@@ -10,7 +10,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Random;
 
-public class TimeGenaration extends EntityGenaration {
+public class TimeGeneration extends EntityGeneration {
     private String[] time;
 
     public String[] getTime() {
@@ -21,12 +21,12 @@ public class TimeGenaration extends EntityGenaration {
         this.time = time;
     }
 
-    public TimeGenaration loadFromFile(String fileName) {
+    public TimeGeneration loadFromFile(String fileName) {
         try {
             Gson gson = new Gson();
             Reader reader = new FileReader(fileName);
             // Convert JSON File to Java Object
-            TimeGenaration timeGenaration = gson.fromJson(reader, TimeGenaration.class);
+            TimeGeneration timeGenaration = gson.fromJson(reader, TimeGeneration.class);
             return timeGenaration;
         } catch (IOException e) {
             e.printStackTrace();
@@ -34,7 +34,7 @@ public class TimeGenaration extends EntityGenaration {
         return null;
     }
 
-    public Time[] genarate(int amount) {
+    public Time[] generate(int amount) {
         Time[] times = new Time[amount];
         Random rd = new Random();
         for (int i = 0; i < amount; i++) {
@@ -49,13 +49,5 @@ public class TimeGenaration extends EntityGenaration {
             }
         }
         return times;
-    }
-
-    public static void main(String[] args) {
-        TimeGenaration timeGenaration = new TimeGenaration().loadFromFile(".\\src\\main\\resources\\time_genaration.json");
-        Time[] times = timeGenaration.genarate(4);
-        for (Time time: times) {
-            System.out.println(time.toString());
-        }
     }
 }

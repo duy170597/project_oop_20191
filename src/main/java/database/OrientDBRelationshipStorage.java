@@ -7,15 +7,20 @@ import ralationship.Relationship;
 import java.util.ArrayList;
 import java.util.Random;
 
-import static database.OrientDBEntityStorage.agreementVertices;
-import static database.OrientDBEntityStorage.countryVertices;
-import static database.OrientDBEntityStorage.eventVertices;
-import static database.OrientDBEntityStorage.locationVertices;
-import static database.OrientDBEntityStorage.organizationVertices;
-import static database.OrientDBEntityStorage.personVertices;
-
-
 public class OrientDBRelationshipStorage extends DBConnenction implements IRelationshipStorage {
+    private OrientDBEntityStorage entityStorage;
+
+    public OrientDBRelationshipStorage(OrientDBEntityStorage entityStorage) {
+        this.entityStorage = entityStorage;
+    }
+
+    public OrientDBEntityStorage getEntityStorage() {
+        return entityStorage;
+    }
+
+    public void setEntityStorage(OrientDBEntityStorage entityStorage) {
+        this.entityStorage = entityStorage;
+    }
 
     private void insertRelationships(Relationship[] supportRelationships, ArrayList<OVertex[]> subjects, ArrayList<OVertex[]> objects, String dbClassName) {
         Random rd = new Random();
@@ -39,9 +44,9 @@ public class OrientDBRelationshipStorage extends DBConnenction implements IRelat
         createDBSession();
 
         ArrayList<OVertex[]> subjects = new ArrayList<OVertex[]>(); // chứa tập các subject có thể trong quan hệ ủng hộ
-        subjects.add(countryVertices);
+        subjects.add(entityStorage.getCountryVertices());
         ArrayList<OVertex[]> objects = new ArrayList<OVertex[]>();  // chứa tập các object có thể trong quan hệ ủng hộ
-        objects.add(countryVertices);
+        objects.add(entityStorage.getCountryVertices());
 
         insertRelationships(agreementRelationships, subjects, objects, "HasAgree");
 
@@ -53,12 +58,12 @@ public class OrientDBRelationshipStorage extends DBConnenction implements IRelat
         createDBConnection();
         createDBSession();
 
-        ArrayList<OVertex[]> subjects = new ArrayList<OVertex[]>(); // chứa tập các subject có thể trong quan hệ ủng hộ
-        subjects.add(personVertices);
-        subjects.add(countryVertices);
-        ArrayList<OVertex[]> objects = new ArrayList<OVertex[]>();  // chứa tập các object có thể trong quan hệ ủng hộ
-        objects.add(agreementVertices);
-        objects.add(eventVertices);
+        ArrayList<OVertex[]> subjects = new ArrayList<OVertex[]>();
+        subjects.add(entityStorage.getPersonVertices());
+        subjects.add(entityStorage.getCountryVertices());
+        ArrayList<OVertex[]> objects = new ArrayList<OVertex[]>();
+        objects.add(entityStorage.getAgreementVertices());
+        objects.add(entityStorage.getEventVertices());
 
         insertRelationships(cancelRelationships, subjects, objects, "HasCancelled");
 
@@ -70,13 +75,13 @@ public class OrientDBRelationshipStorage extends DBConnenction implements IRelat
         createDBConnection();
         createDBSession();
 
-        ArrayList<OVertex[]> subjects = new ArrayList<OVertex[]>(); // chứa tập các subject có thể trong quan hệ ủng hộ
-        subjects.add(personVertices);
-        subjects.add(countryVertices);
-        ArrayList<OVertex[]> objects = new ArrayList<OVertex[]>();  // chứa tập các object có thể trong quan hệ ủng hộ
-        objects.add(countryVertices);
-        objects.add(agreementVertices);
-        objects.add(eventVertices);
+        ArrayList<OVertex[]> subjects = new ArrayList<OVertex[]>();
+        subjects.add(entityStorage.getPersonVertices());
+        subjects.add(entityStorage.getCountryVertices());
+        ArrayList<OVertex[]> objects = new ArrayList<OVertex[]>();
+        objects.add(entityStorage.getCountryVertices());
+        objects.add(entityStorage.getAgreementVertices());
+        objects.add(entityStorage.getEventVertices());
 
         insertRelationships(disagreeRelationships, subjects, objects, "HasDisagree");
 
@@ -88,10 +93,10 @@ public class OrientDBRelationshipStorage extends DBConnenction implements IRelat
         createDBConnection();
         createDBSession();
 
-        ArrayList<OVertex[]> subjects = new ArrayList<OVertex[]>(); // chứa tập các subject có thể trong quan hệ ủng hộ
-        subjects.add(personVertices);
-        ArrayList<OVertex[]> objects = new ArrayList<OVertex[]>();  // chứa tập các object có thể trong quan hệ ủng hộ
-        objects.add(eventVertices);
+        ArrayList<OVertex[]> subjects = new ArrayList<OVertex[]>();
+        subjects.add(entityStorage.getPersonVertices());
+        ArrayList<OVertex[]> objects = new ArrayList<OVertex[]>();
+        objects.add(entityStorage.getEventVertices());
 
         insertRelationships(expressRelationships, subjects, objects, "HasExpressed");
 
@@ -103,10 +108,10 @@ public class OrientDBRelationshipStorage extends DBConnenction implements IRelat
         createDBConnection();
         createDBSession();
 
-        ArrayList<OVertex[]> subjects = new ArrayList<OVertex[]>(); // chứa tập các subject có thể trong quan hệ ủng hộ
-        subjects.add(personVertices);
-        ArrayList<OVertex[]> objects = new ArrayList<OVertex[]>();  // chứa tập các object có thể trong quan hệ ủng hộ
-        objects.add(personVertices);
+        ArrayList<OVertex[]> subjects = new ArrayList<OVertex[]>();
+        subjects.add(entityStorage.getPersonVertices());
+        ArrayList<OVertex[]> objects = new ArrayList<OVertex[]>();
+        objects.add(entityStorage.getPersonVertices());
 
         insertRelationships(meetingRelationships, subjects, objects, "HasMet");
 
@@ -118,10 +123,10 @@ public class OrientDBRelationshipStorage extends DBConnenction implements IRelat
         createDBConnection();
         createDBSession();
 
-        ArrayList<OVertex[]> subjects = new ArrayList<OVertex[]>(); // chứa tập các subject có thể trong quan hệ ủng hộ
-        subjects.add(countryVertices);
-        ArrayList<OVertex[]> objects = new ArrayList<OVertex[]>();  // chứa tập các object có thể trong quan hệ ủng hộ
-        objects.add(countryVertices);
+        ArrayList<OVertex[]> subjects = new ArrayList<OVertex[]>();
+        subjects.add(entityStorage.getCountryVertices());
+        ArrayList<OVertex[]> objects = new ArrayList<OVertex[]>();
+        objects.add(entityStorage.getCountryVertices());
 
         insertRelationships(negotiateRelationships, subjects, objects, "HasNegotiated");
 
@@ -133,11 +138,11 @@ public class OrientDBRelationshipStorage extends DBConnenction implements IRelat
         createDBConnection();
         createDBSession();
 
-        ArrayList<OVertex[]> subjects = new ArrayList<OVertex[]>(); // chứa tập các subject có thể trong quan hệ ủng hộ
-        subjects.add(organizationVertices);
-        subjects.add(personVertices);
-        ArrayList<OVertex[]> objects = new ArrayList<OVertex[]>();  // chứa tập các object có thể trong quan hệ ủng hộ
-        objects.add(eventVertices);
+        ArrayList<OVertex[]> subjects = new ArrayList<OVertex[]>();
+        subjects.add(entityStorage.getOrganizationVertices());
+        subjects.add(entityStorage.getPersonVertices());
+        ArrayList<OVertex[]> objects = new ArrayList<OVertex[]>();
+        objects.add(entityStorage.getEventVertices());
 
         insertRelationships(organizationRelationships, subjects, objects, "HasOrganized");
 
@@ -149,13 +154,13 @@ public class OrientDBRelationshipStorage extends DBConnenction implements IRelat
         createDBConnection();
         createDBSession();
 
-        ArrayList<OVertex[]> subjects = new ArrayList<OVertex[]>(); // chứa tập các subject có thể trong quan hệ ủng hộ
-        subjects.add(personVertices);
-        subjects.add(organizationVertices);
-        ArrayList<OVertex[]> objects = new ArrayList<OVertex[]>();  // chứa tập các object có thể trong quan hệ ủng hộ
-        objects.add(organizationVertices);
-        objects.add(eventVertices);
-        objects.add(agreementVertices);
+        ArrayList<OVertex[]> subjects = new ArrayList<OVertex[]>();
+        subjects.add(entityStorage.getPersonVertices());
+        subjects.add(entityStorage.getOrganizationVertices());
+        ArrayList<OVertex[]> objects = new ArrayList<OVertex[]>();
+        objects.add(entityStorage.getOrganizationVertices());
+        objects.add(entityStorage.getEventVertices());
+        objects.add(entityStorage.getAgreementVertices());
 
         insertRelationships(participateRelationships, subjects, objects, "HasParticipated");
 
@@ -167,13 +172,13 @@ public class OrientDBRelationshipStorage extends DBConnenction implements IRelat
         createDBConnection();
         createDBSession();
 
-        ArrayList<OVertex[]> subjects = new ArrayList<OVertex[]>(); // chứa tập các subject có thể trong quan hệ ủng hộ
-        subjects.add(personVertices);
-        subjects.add(countryVertices);
-        ArrayList<OVertex[]> objects = new ArrayList<OVertex[]>();  // chứa tập các object có thể trong quan hệ ủng hộ
-        objects.add(countryVertices);
-        objects.add(agreementVertices);
-        objects.add(eventVertices);
+        ArrayList<OVertex[]> subjects = new ArrayList<OVertex[]>();
+        subjects.add(entityStorage.getPersonVertices());
+        subjects.add(entityStorage.getCountryVertices());
+        ArrayList<OVertex[]> objects = new ArrayList<OVertex[]>();
+        objects.add(entityStorage.getCountryVertices());
+        objects.add(entityStorage.getAgreementVertices());
+        objects.add(entityStorage.getEventVertices());
 
         insertRelationships(supportRelationships, subjects, objects, "HasSupported");
 
@@ -185,10 +190,10 @@ public class OrientDBRelationshipStorage extends DBConnenction implements IRelat
         createDBConnection();
         createDBSession();
 
-        ArrayList<OVertex[]> subjects = new ArrayList<OVertex[]>(); // chứa tập các subject có thể trong quan hệ ủng hộ
-        subjects.add(countryVertices);
-        ArrayList<OVertex[]> objects = new ArrayList<OVertex[]>();  // chứa tập các object có thể trong quan hệ ủng hộ
-        objects.add(countryVertices);
+        ArrayList<OVertex[]> subjects = new ArrayList<OVertex[]>();
+        subjects.add(entityStorage.getCountryVertices());
+        ArrayList<OVertex[]> objects = new ArrayList<OVertex[]>();
+        objects.add(entityStorage.getCountryVertices());
 
         insertRelationships(tightenRelationships, subjects, objects, "HasTighten");
 
@@ -200,11 +205,11 @@ public class OrientDBRelationshipStorage extends DBConnenction implements IRelat
         createDBConnection();
         createDBSession();
 
-        ArrayList<OVertex[]> subjects = new ArrayList<OVertex[]>(); // chứa tập các subject có thể trong quan hệ ủng hộ
-        subjects.add(eventVertices);
-        ArrayList<OVertex[]> objects = new ArrayList<OVertex[]>();  // chứa tập các object có thể trong quan hệ ủng hộ
-        objects.add(locationVertices);
-        objects.add(countryVertices);
+        ArrayList<OVertex[]> subjects = new ArrayList<OVertex[]>();
+        subjects.add(entityStorage.getEventVertices());
+        ArrayList<OVertex[]> objects = new ArrayList<OVertex[]>();
+        objects.add(entityStorage.getLocationVertices());
+        objects.add(entityStorage.getCountryVertices());
 
         insertRelationships(takesPlaceRelationships, subjects, objects, "TakesPlace");
 

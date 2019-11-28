@@ -1,15 +1,15 @@
-package entitygenaration;
+package entitygeneration;
 
 import entity.Entity;
 
-abstract public class EntityGenaration {
+abstract public class EntityGeneration {
     private String[] id;		// tập các định danh
     private String[] label;	// tập các nhãn hiển thị
     private String[] description;   // tập các mô tả
 
-    abstract public EntityGenaration loadFromFile(String fileName);
+    abstract public EntityGeneration loadFromFile(String fileName);
 
-    abstract public Entity[] genarate(int amount);
+    abstract public Entity[] generate(int amount);
 
     public String[] getId() {
         return id;

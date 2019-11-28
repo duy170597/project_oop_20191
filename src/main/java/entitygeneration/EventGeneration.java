@@ -1,4 +1,4 @@
-package entitygenaration;
+package entitygeneration;
 
 import com.google.gson.Gson;
 import entity.Event;
@@ -8,13 +8,13 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.Random;
 
-public class EventGenaration extends EntityGenaration {
-    public EventGenaration loadFromFile(String fileName) {
+public class EventGeneration extends EntityGeneration {
+    public EventGeneration loadFromFile(String fileName) {
         try {
             Gson gson = new Gson();
             Reader reader = new FileReader(fileName);
             // Convert JSON File to Java Object
-            EventGenaration eg = gson.fromJson(reader, EventGenaration.class);
+            EventGeneration eg = gson.fromJson(reader, EventGeneration.class);
             return eg;
         } catch (IOException e) {
             e.printStackTrace();
@@ -22,7 +22,7 @@ public class EventGenaration extends EntityGenaration {
         return null;
     }
 
-    public Event[] genarate(int amount) {
+    public Event[] generate(int amount) {
         Event[] events = new Event[amount];
         Random rd = new Random();
         for (int i = 0; i < amount; i++) {
@@ -32,13 +32,5 @@ public class EventGenaration extends EntityGenaration {
                     getDescription()[rd.nextInt(getDescription().length)]);
         }
         return events;
-    }
-
-    public static void main(String[] args) {
-        EventGenaration ev = new EventGenaration().loadFromFile(".\\src\\main\\resources\\event_genaration.json");
-        Event[] events = ev.genarate(4);
-        for (Event event: events) {
-            System.out.println(event.toString());
-        }
     }
 }

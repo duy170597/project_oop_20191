@@ -37,8 +37,8 @@ public class Menu {
         System.out.print("\tNhập số quan hệ: ");
         M = scanner.nextInt();
 
-        Utility.createEntities(N);
-        Utility.createRelationships(M);
+        DataGeneration.createEntities(N);
+        DataGeneration.createRelationships(M);
     }
 
     public static void basicQueryMenu(Scanner scanner) {

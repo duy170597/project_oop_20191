@@ -1,4 +1,4 @@
-package entitygenaration;
+package entitygeneration;
 
 import com.google.gson.Gson;
 import entity.Person;
@@ -10,7 +10,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Random;
 
-public class PersonGenaration extends EntityGenaration {
+public class PersonGeneration extends EntityGeneration {
     private String[] gender; // giới tính
     private String[] birthdate;  // ngày sinh
     private String[] email;
@@ -48,12 +48,12 @@ public class PersonGenaration extends EntityGenaration {
         this.position = position;
     }
 
-    public PersonGenaration loadFromFile(String fileName) {
+    public PersonGeneration loadFromFile(String fileName) {
         try {
             Gson gson = new Gson();
             Reader reader = new FileReader(fileName);
             // Convert JSON File to Java Object
-            PersonGenaration personGenaration = gson.fromJson(reader, PersonGenaration.class);
+            PersonGeneration personGenaration = gson.fromJson(reader, PersonGeneration.class);
             return personGenaration;
         } catch (IOException e) {
             e.printStackTrace();
@@ -61,7 +61,7 @@ public class PersonGenaration extends EntityGenaration {
         return null;
     }
 
-    public Person[] genarate(int amount) {
+    public Person[] generate(int amount) {
         Person[] people = new Person[amount];
         Random rd = new Random();
         for (int i = 0; i < amount; i++) {
@@ -79,14 +79,5 @@ public class PersonGenaration extends EntityGenaration {
             }
         }
         return people;
-    }
-
-    public static void main(String[] args) {
-        PersonGenaration personGenaration = new PersonGenaration().loadFromFile(".\\src\\main\\resources\\person_genaration.json");
-        Person[] people = personGenaration.genarate(4);
-        for (Person person: people
-             ) {
-            System.out.println(person.toString());
-        }
     }
 }
