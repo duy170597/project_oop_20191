@@ -1,4 +1,11 @@
 {
-  "label": ["Việt Nam", "Italy"],
-  "description": ["Quốc gia thuộc khu vực Đông Nam Á"]
+  "label": ["Việt Nam","Mỹ","Pháp","Anh","Đức","Nhật Bản","Hàn Quốc","Trung Quốc","Triều Tiên","Lào","Campuchia","Thái Lan","Tây Ban Nha","Brasil","Hà Lan","Indonesia","Singapo",
+    "Malaysia","Dubai","Nga","Bồ Đào Nha","Argentina","Thụy Điển","Thụy Sĩ","Ai Cập","Iraq","Iran","Myanmar"],
+
+  "description": ["Là 1 quốc gia thuộc Đông Nam Á","Là 1 quốc gia thuộc khu vực Đông Á","Là quốc gia thuộc Tây Âu","đất nước mặt trời mọc","xử xở kim chi","Là quốc gia có tỉ lệ GDP cao nhất thế giới",
+    "Là quốc gia có diện tích lớn nhất thế giới","là quốc gia đông dân nhất thế giới","vô địch 5 lần World-cup","quê hương của Lionel Messi","là quốc gia không giáp biển, có tổng diện tích 41.285 km²",
+    "là nước lớn thứ ba trong Liên minh châu Âu, với dân số 10.2 triệu người"," có địa hình thấp và bằng phẳng, chỉ có khoảng 50% diện tích đất nằm cao hơn 1 m so với mực nước biển",
+    "Thủ đô và thành phố lớn nhất là Madrid","Là một trong những nền văn minh lâu đời nhất thế giới","áo dài, phở và bánh mì","Là quốc gia đáng sống nhất năm 2018"," có nguồn tài nguyên xăng dầu khổng lồ",
+    "nổi tiếng với những thần thoại cổ xưa","có diện tích 513.000 km2 (198.000 dặm vuông) - lớn thứ 50 trên thế giới và dân số ước tính vào khoảng 67 triệu người - xếp hạng 20 trên thế giới",
+    "Là quốc gia có nền kinh tế và quân sự mạnh nhất thế giới","phát triển mạnh về thể thao điện tử","là 1 trong 5 nhà nước sở hữu vũ khí hạt nhân"]
 }

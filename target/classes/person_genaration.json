@@ -1,8 +1,42 @@
 {
-  "label": ["Thủ tướng Nguyễn Xuân Phúc"],
-  "description": ["Nguyễn Xuân Phúc là thủ tướng thứ 7 của nước Cộng hòa xã hội chủ nghĩa Việt Nam"],
-  "gender": ["true"],
-  "birthdate": ["20/07/1954"],
-  "email": ["nguyenxuanphuc@gmail.com"],
-  "position": ["Thủ tướng"]
+
+  "label": ["Thủ tướng Nguyễn Xuân Phúc","Tập Cận Bình","Nguyễn Phú Trọng","Donal Trump","Trần Dần","Trần Hưng Đạo","Steve jobs ",
+    "Khá Bảnh","Mark Zuckerberg","Jack Ma","Bill Gates","Black Obama","Tập Cận Bình","Mao Trạch Đông","Hồ Chí Minh","Phạm Văn Đồng",
+    "Nguyễn Văn Trỗi","Bùi Thị Cúc", "Võ Thị Sáu", "Thánh Gióng" , "Hoàng Minh Sơn" , "Nguyễn Trọng Giảng","Michael Jackson",
+    "Oprah Winfrey","Tom Cruise","Katy Perry","James Patterson","J.R.R Tokien","Taylor Swift","Sơn Tùng Mtp","Noo Phước Thịnh",
+    "Dũng trọc Hà Đông","Khánh Sky","Bilbo Baggins","Nguyễn Sinh Sắc","Võ Nguyên Giáp", "Frodo Baggins","Cristiano Ronaldo",
+    "Mỹ Tâm", "Đàm Vĩnh Hưng", "Leonardo DiCaprio","Jerry Seinfeld","Steven Spielberg", "Spice Girls","Harrison Ford",
+    "Robin Williams","Céline Dion","The Rolling Stones","Julia Roberts","George Lucas","Tom Hanks","Michael Jordan","The Rolling Stones",
+    "Tiger Woods","Backstreet Boys","Cher","Steven Spielberg","Bruce Willis","Faker"],
+
+  "description": ["Nguyễn Xuân Phúc là thủ tướng thứ 7 của nước Cộng hòa xã hội chủ nghĩa Việt Nam"
+  ,"là một ca sĩ, nhạc sĩ, nhà sản xuất thu âm, vũ công và diễn viên người Mỹ","Tổng thống nước mỹ nhiệm kì 2015-2020","Tổng thống nước mỹ nhiệm kì 2005-2015",
+    "Cố vấn tối cao của Tổng thống hoa kì","Idol của giới trẻ","Em của bảnh đấy mọi người ạ","Bố nuôi của khá bảnh, một đại ca giang hồ","Là một nhà văn nổi tiếng với tiểu thuyết về Lord of the ring và The hobbit","Là một nhân vật trong tác phẩm the Hobbit","Là một nhân vật trong tác phẩm the Hobbit", "Cháu của Bilbo Baggins","Chủ tỉch và là người sáng tạo ra mạng xã hội Facebook",
+    "Chủ tỉnh tập đoàn Apple,người sáng tạo ra mẫu điện thoại Iphone,Mac Os","Lãnh tụ vĩ đại,Chủ tịch đầu tiên của Nước việt nam dân chủ cộng hòa","Là một nhà mưu lược tài ba, dưới thời chủ tịch Hồ Chính Minh",
+    "Một ca sĩ nổi tiếng của việt nam với các tác phẩm như Nắng ấm xa dần,Lạc trô,...","Một ca sĩ nổi tiếng của việt nam với các tác phẩm như Người hãy quên em đi...",
+    "Một ca sĩ nổi tiếng của việt nam với các tác phẩm như Xa em,...","Một gamer nổi tiếng trong game liên minh huyền thoại","là Người sinh thành của Hồ chủ tịch",
+    "Là một nhân vật hư cấu trong lịch sử việt nam, đánh thắng giặc Ân", "Hiệu trưởng trường đại học bách khoa hà nội niêm khóa 2015-2020","Hiệu trưởng trường đại học bách khoa hà nội niêm khóa 2005-2010",
+    "Cầu thủ bóng đá nổi tiếng nhất thế giới","là Ca sĩ  hát nhạc Rock nổi tiếng nhất thế giới"," Người sáng lập ra hệ điều hành Windows người giàu nhất thế giới",
+    " là một giám đốc truyền thông, nữ diễn viên, người dẫn chương trình trò chuyện, nhà sản xuất truyền hình và nhà từ thiện người Mỹ","là một diễn viên, nhà sản xuất phim, nhà hoạt động môi trường người Mỹ.[3] DiCaprio khởi nghiệp bằng cách xuất hiện trong các quảng cáo truyền hình vào cuối những năm 1980",
+    "là một diễn viên hài, diễn viên, nhà văn, nhà sản xuất và đạo diễn người Mỹ.Anh nổi tiếng vì đã đóng vai chính mình trong hài kịch tình huống Seinfeld,, do anh sáng tác và viết kịch bản với Larry David",
+    "là một nhà làm phim người Mỹ. Ông được coi là một trong những người tiên phong của kỷ nguyên điện ảnh New Hollywood và là một trong những đạo diễn và nhà sản xuất điện ảnh nổi tiếng nhất trong lịch sử",
+    "là nữ ca sĩ người Canada. Sinh ra trong một đại gia đình tại Charlemagne, tỉnh Québec, Dion nổi lên như một ngôi sao ở lứa tuổi thiếu niên trong cộng đồng Pháp ngữ sau khi người quản lý và đồng thời là chồng tương lai của cô, René Angélil cho vay nhà để chi trả đĩa nhạc đầu tiên của Dion"
+
+  ],
+
+  "gender": ["fasle","true"],
+
+  "birthdate": ["20/07/1954","29/08/1958","29/01/1954","19/01/1954","22/01/1956","29/01/1934","29/04/1944","24/06/1945","20/05/2001","22/03/1974","15/05/1997","29/01/1754"
+  ,"29/01/1954","29/01/1954","29/01/1954","29/01/1954","29/01/1954","14/02/1984","09/04/1954","13/12/1954","06/05/1997","07/02/1984","21/1/1994","29/09/1993","12/01/1994","29/01/1934"
+  ,"13/02/2000","08/03/1997","19/05/1994","20/11/1984","23/11/1924","09/03/1992","17/11/1988","23/10/1995","17/04/1938","07/03/1928","02/03/1938"
+  ],
+
+  "email": ["nguyenxuanphuc@gmail.com","null","Nguyenphutrong@gmail.com.","Khabanh1993@gmail.com","Dungtrochadong@gmail.com","Khánhsky@gmail.com","Billgate@gmail.com","MarkZuckfb@gmail.com","Taylor@gmail.com","Katy@gmail.com","Hochiminh@gmail.com",
+    "Maotrachdong@gmail.com","Blackobama@gmail.com","Donal@gmail.com","Bruce@gmail.com","Vonguyengiap@gmail.com","Khabanh1993@gmail.com","Sontungmtp@gmail.com","Trandan@gmail.com",
+    "Ronaldo@gmail.com","Stevejob@gmail.com"],
+
+  "position": ["Thủ tướng","ca sĩ","Nhà văn", "Giám đốc","Chủ tịch nước","Nhân vật hư cấu", "Thành phần bất hảo","Hiệu trưởng","Cầu thủ bóng đá","Chủ tịch hội đồng quản trị","Diễn viên",
+    "Ca sĩ Rock", "Gamer","Cố vấn tối cao","Đạo diễn","Vua thời trần","Nữ ca sĩ", "Nữ diễn viên","Chủ tịnh tập đoàn Alibaba","Chủ tịnh tập đoàn Facebook","Chủ tịnh tập đoàn Apple",
+    "Chủ tịnh tập đoàn Microsoft"]
+
 }
