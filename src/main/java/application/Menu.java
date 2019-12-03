@@ -43,16 +43,16 @@ public class Menu {
 
     public static void basicQueryMenu(Scanner scanner) {
         System.out.println("Các câu truy vấn cơ bản");
-        System.out.println("\t1. Đưa ra tất cả các sự kiện mà Apple tổ chức");
-        System.out.println("\t2. ...");
-        System.out.println("\t3. ...");
-        System.out.println("\t4. ...");
-        System.out.println("\t5. ...");
-        System.out.println("\t6. ...");
-        System.out.println("\t7. ...");
-        System.out.println("\t8. ...");
-        System.out.println("\t9. ...");
-        System.out.println("\t10. ...");
+        System.out.println("\t1. Đưa ra tất cả các sự kiện mà UPU tổ chức");
+        System.out.println("\t2. Đưa ra thông tin về sự kiện Giao_lưu_sinh_viên");
+        System.out.println("\t3. Đưa ra thông tin về thành phố Đà Nẵng");
+        System.out.println("\t4. Mỹ đang đàm phán với các quốc gia nào");
+        System.out.println("\t5. Chủ_nhật_đỏ diễn ra tại đâu");
+        System.out.println("\t6. Việt Nam ký thỏa thuận với những quốc gia nào");
+        System.out.println("\t7. Những người tham gia sự kiện Ra mắt iphone 8");
+        System.out.println("\t8. Những ai đã phát biểu tại sự kiện Ra mắt Bphone 3");
+        System.out.println("\t9. Nguyễn Phú Trọng đã gặp những ai");
+        System.out.println("\t10. Những ai sẽ tham gia sự kiện Đạp xe vì môi trường");
         System.out.print("Nhập lựa chọn của bạn: ");
         int choice = scanner.nextInt();
 
@@ -93,9 +93,9 @@ public class Menu {
 
     public static void advanceQueryMenu(Scanner scanner) {
         System.out.println("Các câu truy vấn nâng cao");
-        System.out.println("\t1. ...");
-        System.out.println("\t2. ...");
-        System.out.println("\t3. ...");
+        System.out.println("\t1. Tìm 3 tổ chức tổ chức nhiều sự kiện nhất");
+        System.out.println("\t2. Tìm tất cả các đất nước bị căng thẳng bởi các đất nước mà việt nam đàm phán");
+        System.out.println("\t3. Tìm 3 Agreement được ủng hộ nhiều nhất");
         System.out.println("\t4. ...");
         System.out.println("\t5. ...");
         System.out.println("\t6. ...");
